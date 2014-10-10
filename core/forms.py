@@ -1,4 +1,4 @@
 from django import forms
 
-class MyForm(forms.Form):
-    message = forms.CharField()
+class LyricForm(forms.Form):
+    lyrics = forms.CharField()

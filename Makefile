@@ -2,6 +2,7 @@ shell:
 	@python manage.py shell_plus --settings=settings.development
 
 run:
+	@pip install -r requirements/development.txt
 	@sudo killall -9 supervisord &
 	@sudo killall -9 gunicorn &
 	@python manage.py validate --settings=settings.development &
