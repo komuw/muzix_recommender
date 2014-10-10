@@ -1,5 +1,7 @@
 import requests
 
+from django.views.decorators.csrf import csrf_exempt 
+from django.views.generic import View
 from django.views.generic.edit import FormView
 from django.shortcuts import render
 
@@ -12,6 +14,10 @@ class SongView(FormView):
     """
     form_class = LyricForm
     template_name = "songs.html"
+    
+    @csrf_exempt
+    def dispatch(self, *args, **kwargs):
+        return super(SongView, self).dispatch(*args, **kwargs)
 
     def post(self, request, *args, **kwargs):
         template_vars = {}
@@ -20,9 +26,11 @@ class SongView(FormView):
         if not form.is_valid():
             return self.form_invalid(form)
         else:
-            lyrics = form.cleaned_data.get('lyrics')
-            
-            template_vars['companies'] = companies
+            #import pdb; pdb.set_trace()
+            lyrics = form.cleaned_data.get('search_lyrics')
+            cool = "COOL"
+            template_vars['cool'] = cool
             
 
-        return render(request, template_name, template_vars)
+        return render(request, self.template_name, template_vars)
+    

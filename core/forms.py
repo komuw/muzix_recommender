@@ -1,4 +1,4 @@
 from django import forms
 
 class LyricForm(forms.Form):
-    lyrics = forms.CharField()
+    search_lyrics = forms.CharField()
