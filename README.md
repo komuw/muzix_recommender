@@ -8,6 +8,6 @@
 
 ## Deployment
 
-* make deploy env=staging
+* make deploy
 
     To be continued....
