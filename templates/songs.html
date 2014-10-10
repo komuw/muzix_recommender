@@ -38,9 +38,10 @@
                 </form>
                 <p>
                     {{cool}} <br/><br/>
-                    {{try}} <b>{{track1}}</b> {{start2}} <b>{{artist1}}</b> {{start3}} <a href="{{output}}">{{output}}</a> <br/><br/>
-                    {{b}} <b>{{track2}}</b> {{start2}} <b>{{artist2}}</b> {{start3}} <a href="{{output2}}">{{output2}}</a> <br/><br/>
-                    {{c}} <b>{{track3}}</b> {{start2}} <b>{{artist3}}</b> {{start3}} <a href="{{output3}}">{{output3}}</a> <br/><br/>
+                    {% for i in songs %}
+                        {{ i }} <br/>
+                    {% endfor %}
+                    <br/>
                     <a href="https://twitter.com/share" class="twitter-share-button" data-via="komu_wairagu" data-size="large">Tweet</a>
                     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
                 </p>
