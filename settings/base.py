@@ -104,6 +104,11 @@ TEMPLATE_DIRS = (
         os.path.join(BASE_DIR, 'templates'),
     )
 
+# APIkeys
+# TODO: store this as environment variables.
+MUSIXMATCH_APIKEY = 'fcdcf2caf6e4f56a5a17a65d3af15722'
+TINYSONG_APIKEY = '2dbb015b1852cbdb866f766dbb7c49e8'
+
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
