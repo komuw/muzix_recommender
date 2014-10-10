@@ -1,0 +1,27 @@
+# Compiled Python modules
+*.pyo
+*.pyc
+
+# SQLite
+*.db
+*.s3db
+*.sqlite3
+
+# Mercurial backup files
+*.orig
+*.rej
+
+# Supervisor files
+supervisord.log
+supervisord.pid
+
+# Vagrant private files
+.vagrant/*
+log
+celerybeat-schedule
+
+#logs
+*.log
+
+#pids
+*.pid

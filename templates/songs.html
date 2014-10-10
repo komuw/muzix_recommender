@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Muzix Dedicat.e -Dedicate a song with the exact words that U want.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link href="/home/komu/templates/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+    <link href="/home/komu/templates/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="container">
+	
+	<div class="row">
+<div class="span2" style="background-color:#FF0000"><div class="span2" style="background-color:#FF0000"></div><div class="span2" style="background-color:#FF0000"></div><div class="span2" style="background-color:#FF0000"></div><div class="span2" style="background-color:#FF0000"></div><div class="span2" style="background-color:#FF0000"></div><div class="span2" style="background-color:#FF0000"></div><div class="span2" style="background-color:#FF0000"></div><div class="span2" style="background-color:#FF0000"></div><div class="span2" style="background-color:#FF0000"></div><div class="span2" style="background-color:#FF0000"></div><div class="span2" style="background-color:#FF0000"></div><div class="span2" style="background-color:#FF0000"></div><div class="span2" style="background-color:#FF0000"></div><div class="span2" style="background-color:#FF0000"></div><div class="span2" style="background-color:#FF0000"></div><div class="span2" style="background-color:#FF0000"></div><div class="span2" style="background-color:#FF0000"></div><div class="span2" style="background-color:#FF0000"></div><div class="span2" style="background-color:#FF0000"></div><div class="span2" style="background-color:#FF0000"></div></div>
+
+<div class="span7 offset1" >
+<h1>
+<img src="E:/myDjangoProjects/mysite/templates/muzix_dedicate_logo.png" alt="Muzix Dedicat.e"><br/><h5>the tiny-mini music recommendation engine.</h5></h1>
+<form action="" method="get">
+<p>Lets say you want to dedicate a song with the words -I like blue eyes- but, you don't know any song that 
+has those words in its lyrics. Muzix Dedicat.e can help you search for songs that has those words in its lyrics.<br/>
+Just enter the words you want to be found in a song, hit the Submit button & we'll find the songs for you.<br/>
+We'll even generate links you can use to go & listen to those songs we found. </p>
+<table>
+{{ form.as_table }}
+</table>
+<input class="btn btn-large btn-primary" type="submit" value="Submit">
+</form>
+<p>{{start}} <br/><br/>
+{{a}} <b>{{track1}}</b> {{start2}} <b>{{artist1}}</b> {{start3}} <a href="{{output}}">{{output}}</a> <br/><br/>
+{{b}} <b>{{track2}}</b> {{start2}} <b>{{artist2}}</b> {{start3}} <a href="{{output2}}">{{output2}}</a> <br/><br/>
+{{c}} <b>{{track3}}</b> {{start2}} <b>{{artist3}}</b> {{start3}} <a href="{{output3}}">{{output3}}</a> <br/><br/>
+<a href="https://twitter.com/share" class="twitter-share-button" data-via="komu_wairagu" data-size="large">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+</p>
+
+<br/>
+<p>This application was developed by <a href="http://www.twitter.com/komu_wairagu">@komu_wairagu</a><br/>
+And unfortunately, the design is also his.</p>
+<br/>
+<p>Made possible courtesy of the good APIs of <a href="http://www.musiXmatch.com">musiXmatch</a> and Groveshark's <a href="http://www.tinysong.com">TinySong</a>
+</div>
+
+<div class="span2" style="background-color:#FF0000"><div class="span2" style="background-color:#FF0000"></div><div class="span2" style="background-color:#FF0000"></div><div class="span2" style="background-color:#FF0000"></div><div class="span2" style="background-color:#FF0000"></div><div class="span2" style="background-color:#FF0000"></div><div class="span2" style="background-color:#FF0000"></div><div class="span2" style="background-color:#FF0000"></div><div class="span2" style="background-color:#FF0000"></div><div class="span2" style="background-color:#FF0000"></div><div class="span2" style="background-color:#FF0000"></div><div class="span2" style="background-color:#FF0000"></div><div class="span2" style="background-color:#FF0000"></div><div class="span2" style="background-color:#FF0000"></div><div class="span2" style="background-color:#FF0000"></div><div class="span2" style="background-color:#FF0000"></div><div class="span2" style="background-color:#FF0000"></div><div class="span2" style="background-color:#FF0000"></div><div class="span2" style="background-color:#FF0000"></div><div class="span2" style="background-color:#FF0000"></div><div class="span2" style="background-color:#FF0000"></div></div>
+</div>
+
+    </div> <!-- /container -->
+  </body>
+</html>
