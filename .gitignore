@@ -25,3 +25,6 @@ celerybeat-schedule
 
 #pids
 *.pid
+
+#static
+static/
