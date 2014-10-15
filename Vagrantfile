@@ -15,7 +15,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. 
-  config.vm.network :forwarded_port, guest: 4500, host: 4500
+  config.vm.network :forwarded_port, guest: 5700, host: 5700
   config.ssh.forward_agent = true
 
   # Share devops folder with guest VM. VirtualBox mounts shares with

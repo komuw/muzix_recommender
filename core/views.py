@@ -28,7 +28,6 @@ class SongView(FormView):
         if not form.is_valid():
             return self.form_invalid(form)
         else:
-            #import pdb; pdb.set_trace()
             lyrics = form.cleaned_data.get('search_lyrics')
 
             url = 'http://api.musixmatch.com/ws/1.1/track.search'
@@ -36,27 +35,25 @@ class SongView(FormView):
             req = requests.get(url, params=payload)
             musix_data = json.loads(req.content)
 
-            #print "data", musix_data['message']['body']['track_list'][0]['track']
+            # print "data", musix_data['message']['body']['track_list'][0]['track']
             for i in musix_data['message']['body']['track_list']:
                 track_name = i['track']['track_name']
                 artist_name = i['track']['artist_name']
-                print "track & artist ", track_name, artist_name
-
-                #  now get tracks from TinySong
+                
+                # now get tracks from TinySong
                 songs = {}
                 urlencoded = "+".join(track_name.split())
                 url = 'http://tinysong.com/a/{0}'.format(urlencoded)
                 payload = {'format': 'json', 'key': settings.TINYSONG_APIKEY}
                 req = requests.get(url, params=payload)
-                tiny_song_data = json.loads(req.content)
-                import pdb; pdb.set_trace()
-                songs['song_url'] = tiny_song_data
+                tiny_song_url = json.loads(req.content)
+                #import pdb; pdb.set_trace()
+                #import pdb; pdb.set_trace()
+                songs[track_name+" "+"by"+" "+artist_name] = tiny_song_url
             
-            template_vars ['songs'] = tiny_song_data
-
-            cool = "COOL"
-            template_vars['cool'] = cool
+            print songs
+            songs ={'a': 'b'}
+            template_vars = songs
             
-
         return render(request, self.template_name, template_vars)
     
