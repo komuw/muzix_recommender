@@ -33,7 +33,11 @@
                     <table>
                         {{ form.as_table }}
                     </table>
-                    <input class="btn btn-large btn-primary" type="submit" value="Submit">
+                    {% if all_songs %}
+                        <a href="{% url 'home' %}" class="btn btn-small btn-primary">Go Back to Search.</a> 
+                    {% else %}
+                        <input class="btn btn-large btn-primary" type="submit" value="Submit">
+                    {% endif %}
                 </form>
                 <p>
                     {% for song, url  in all_songs %}
