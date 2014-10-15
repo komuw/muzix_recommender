@@ -36,24 +36,26 @@ class SongView(FormView):
             musix_data = json.loads(req.content)
 
             # print "data", musix_data['message']['body']['track_list'][0]['track']
+            songs = {}
             for i in musix_data['message']['body']['track_list']:
                 track_name = i['track']['track_name']
                 artist_name = i['track']['artist_name']
                 
                 # now get tracks from TinySong
-                songs = {}
                 urlencoded = "+".join(track_name.split())
                 url = 'http://tinysong.com/a/{0}'.format(urlencoded)
                 payload = {'format': 'json', 'key': settings.TINYSONG_APIKEY}
                 req = requests.get(url, params=payload)
                 tiny_song_url = json.loads(req.content)
-                #import pdb; pdb.set_trace()
-                #import pdb; pdb.set_trace()
+
                 songs[track_name+" "+"by"+" "+artist_name] = tiny_song_url
             
-            print songs
-            songs ={'a': 'b'}
-            template_vars = songs
+            all_songs = songs.items()
+            print "\nsongs2", songs
+            template_vars = {
+                             'all_songs': all_songs,
+                            }
+            print "template vars", template_vars 
             
         return render(request, self.template_name, template_vars)
     

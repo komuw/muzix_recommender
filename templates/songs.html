@@ -19,13 +19,12 @@
             <div class="span2 reddish">
             </div>
             <div class="span7 offset1" >
-                <h1>
-                    <img src="{% static 'images/muzix_logo.png'%}" class="logo"><br/>
-                    <h5>the tiny-mini music recommendation engine.</h5>
+                <h1><h5>the tiny-mini music recommendation engine.</h5>
+                    <img src="{% static 'images/muzix_logo.png'%}" class="logo"><br/>  
                 </h1>
                 <form action="" method="post">
                     <p>
-                        Lets say you want to dedicate/listen a song with the words - I love your blue eyes- but, you don't know any song that 
+                        Lets say you want to dedicate a song with the words - I love your blue eyes- but, you don't know any song that 
                         has those words in its lyrics. 
                         Muzix Recommender can help you search for songs that has those words in its lyrics.<br/>
                         Just enter the words you want to be found in a song, hit the Submit button & we'll find the songs for you.<br/>
@@ -37,9 +36,12 @@
                     <input class="btn btn-large btn-primary" type="submit" value="Submit">
                 </form>
                 <p>
-                    
-                    {% for i in songs %}
-                        {{ i }} <br/>
+                    {% for song, url  in all_songs %}
+                        {% if forloop.counter < 4 %}
+                            {{ song }} : <a  target="_blank" href={{ url }}>Click To Play this Song.</a> <br/>
+                        {% endif %}
+                    {%empty%}
+                        <p>Sorry, we couldn't find any song matching those lyrics. Please try again.</p>
                     {% endfor %}
                     <br/>
                     <a href="https://twitter.com/share" class="twitter-share-button" data-via="komu_wairagu" data-size="large">Tweet</a>
