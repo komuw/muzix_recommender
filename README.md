@@ -11,3 +11,6 @@
 * make deploy
 
     To be continued....
+
+TODO:       
+solve 'ascii' codec can't encode character u'\xe8' in position 10: in line 46 in views.py
