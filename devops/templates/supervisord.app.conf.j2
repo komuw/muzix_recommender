@@ -20,7 +20,7 @@ user={{ APP_USER }}
 directory={{ APP_DIR }}
 environment=DJANGO_SETTINGS_MODULE="settings.{{ APP_ENVIRONMENT }}"
 command=authbind {{ APP_VIRTUALENV }}/bin/gunicorn wsgi:application
-    --workers=4
+    --workers={{ GUNICORN_WORKERS }}
     --bind="0.0.0.0:{{ APP_PORT }}"
      --access-logfile {{ APP_DIR }}/log/%(program_name)s_access.log
 stdout_logfile={{ APP_DIR }}/log/%(program_name)s.log
