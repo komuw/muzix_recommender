@@ -32,7 +32,7 @@ That command will start a virtual machine under the hood, provision it and start
 
 ## Deployment
 * You need to have [ansible](http://www.ansible.com) installed.     
-* A server with a debian linux distro installed.
+* And a server with a debian linux distro installed.
 * Open the file /muzix_recommender/devops/inventory/staging and specify the IP address of the server you want to deploy to and also the ssh user. eg;        
 `ansible_ssh_host=XX.XXX.XX.XXX ansible_ssh_user=root`     
 * from your terminal, isuue the command:      
