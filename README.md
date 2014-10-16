@@ -8,6 +8,11 @@ And it'll generate links you can use to go & listen to those songs.
 [Access the Demo here](http://188.226.144.110:5700/)
 
 ## Developement Setup       
+Pre-requiste:        
+* Get your API keys from both [MusiXmatch](https://developer.musixmatch.com/) and [tinysong](http://tinysong.com/api).
+* Add those keys to the django settings file (or as environment variables if you prefer.)
+`MUSIXMATCH_APIKEY = 'your musiXmatch API key'`      
+`TINYSONG_APIKEY = 'your tiny song API key'
 
 There are two main ways you can run this project:
 
