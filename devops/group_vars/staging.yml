@@ -1,6 +1,6 @@
 ---
 APP_ENVIRONMENT: staging
-APP_VERSION: master
+APP_VERSION: deploy #master
 APP_PORT: 5700
 GUNICORN_WORKERS: 4
 local_env:
