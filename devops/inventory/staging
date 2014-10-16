@@ -1,0 +1,11 @@
+muzix_recommender ansible_ssh_host= ansible_ssh_user=
+
+[app_servers]
+muzix_recommender
+
+[db_servers]
+muzix_recommender
+
+[staging:children]
+app_servers
+db_servers
