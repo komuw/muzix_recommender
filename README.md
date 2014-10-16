@@ -3,8 +3,9 @@
 ## About
 Lets say you want to dedicate a song with the words - I love your blue eyes- but, you don't know any song that has those words.       
 Muzix Recommender can help you search for songs that has those words in its lyrics.     
-And it'll generate links you can use to go & listen to those songs. 
+And it'll generate links you can use to go & listen to those songs.     
 
+[Access the Demo here](http://188.226.144.110:5700/)
 
 ## Developement Setup       
 
