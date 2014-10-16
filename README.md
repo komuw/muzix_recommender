@@ -20,8 +20,8 @@ That command will install requirements, migrate and runserver.
 * Go to your browser and enter: [http://localhost:5700/](http://localhost:5700/)
 
 2. Using vagrant and ansible:         
-* Make sure you have [http://www.vagrantup.com](vagrant) and [http://www.ansible.com](ansible) installed.
-* Make sure you have [https://www.virtualbox.org/](virtualbox) installed.
+* Make sure you have [vagrant](http://www.vagrantup.com) and [ansible](http://www.ansible.com) installed.
+* Make sure you have [virtualbox](https://www.virtualbox.org/) installed.
 * clone this repository
 * cd to the project directory
 * from your terminal, issue the command:       
@@ -31,7 +31,7 @@ That command will start a virtual machine under the hood, provision it and start
 
 
 ## Deployment
-* You need to have [http://www.ansible.com](ansible) installed.     
+* You need to have [ansible](http://www.ansible.com) installed.     
 * A server with a debian linux distro installed.
 * Open the file /muzix_recommender/devops/inventory/staging and specify the IP address of the server you want to deploy to and also the ssh user. eg;        
 `ansible_ssh_host=XX.XXX.XX.XXX ansible_ssh_user=root`     
