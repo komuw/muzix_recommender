@@ -49,6 +49,6 @@ This command just calls the normal ./manage.py test
 ## NB:      
 * This project was tested on a machine running ubuntu 14.04 with ansible version 1.7.1 installed and vagrant version 1.6.3
 * However, It should work for most linux machines. 
-* If you are on a Windows machine, then you should setup the developement environment using method 1, rather than method 2. The last time I checked, ansible wasn't supported on windows.
+* If you are on a Windows machine, then you should setup the development environment using method 1, rather than method 2. The last time I checked, ansible wasn't supported on windows.
 * You can direct any questions, suggestions etc to:     
 komuw05 [At] gmail [dot] com
