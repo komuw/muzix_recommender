@@ -40,8 +40,11 @@ class SongView(FormView):
             for i in musix_data['message']['body']['track_list']:
                 track_name = i['track']['track_name']
                 artist_name = i['track']['artist_name']
+                # solve an encoding bug
+                track_name = track_name.encode('ascii', 'ignore')
                 
                 # now get tracks from TinySong
+                print "track_name", track_name
                 urlencoded = "+".join(track_name.split())
                 url = 'http://tinysong.com/a/{0}'.format(urlencoded)
                 payload = {'format': 'json', 'key': settings.TINYSONG_APIKEY}
@@ -51,7 +54,7 @@ class SongView(FormView):
                 songs[track_name+" "+"by"+" "+artist_name] = tiny_song_url
             
             all_songs = songs.items()
-            print "\nsongs2", songs
+
             template_vars = {
                              'all_songs': all_songs,
                             }

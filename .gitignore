@@ -14,6 +14,7 @@
 # Supervisor files
 supervisord.log
 supervisord.pid
+supervisord.conf
 
 # Vagrant private files
 .vagrant/*

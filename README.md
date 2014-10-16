@@ -14,4 +14,9 @@
 
 TODO:       
 * solve 'ascii' codec can't encode character u'\xe8' in position 10: in line 46 in views.py
+ try : x = x.encode('ascii', 'ignore') 
+ urlencoded
+u'Cool+Mountaineer'
+Marche funèbre
+
 * add tests
