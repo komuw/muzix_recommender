@@ -1,4 +1,4 @@
-muzix_recommender ansible_ssh_host= ansible_ssh_user=
+staging_muzix_recommender ansible_ssh_host=188.226.144.110 ansible_ssh_user=root
 
 [app_servers]
 muzix_recommender
