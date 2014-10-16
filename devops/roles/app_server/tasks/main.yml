@@ -46,7 +46,3 @@
     src={{ APP_DIR }}/supervisord.conf
     dest=/etc/supervisor/conf.d/{{ APP_NAME }}.conf
     state=link force=yes
-
-- name: add celery_user user
-  user: name={{ CELERY_USER }} groups=sudo
-  when: ROOT_USER_BOX
