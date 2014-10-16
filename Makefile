@@ -22,4 +22,4 @@ ssh:
 	@ssh -o ServerAliveInterval=20 root@someIPaddress
 
 deploy:
-	@ansible-playbook devops/site.yml -i devops/inventory/staging --limit=all -vvvv
+	@ansible-playbook devops/site.yml -i devops/inventory/staging --limit=all
