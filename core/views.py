@@ -44,7 +44,6 @@ class SongView(FormView):
                 track_name = track_name.encode('ascii', 'ignore')
                 
                 # now get tracks from TinySong
-                print "track_name", track_name
                 urlencoded = "+".join(track_name.split())
                 url = 'http://tinysong.com/a/{0}'.format(urlencoded)
                 payload = {'format': 'json', 'key': settings.TINYSONG_APIKEY}
@@ -57,8 +56,7 @@ class SongView(FormView):
 
             template_vars = {
                              'all_songs': all_songs,
-                            }
-            print "template vars", template_vars 
+                            } 
             
         return render(request, self.template_name, template_vars)
     
