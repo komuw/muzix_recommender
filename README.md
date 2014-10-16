@@ -10,7 +10,7 @@ And it'll generate links you can use to go & listen to those songs.
 
 There are two main ways you can run this project:
 
-1. The normal way using virtualenv:        
+A. The normal way using virtualenv:        
 * Clone this repository
 * cd to the project directory
 * create a virtualenv
@@ -19,7 +19,7 @@ There are two main ways you can run this project:
 That command will install requirements, migrate and runserver.       
 * Go to your browser and enter: [http://localhost:5700/](http://localhost:5700/)
 
-2. Using vagrant and ansible:         
+B. Using vagrant and ansible:         
 * Make sure you have [vagrant](http://www.vagrantup.com) and [ansible](http://www.ansible.com) installed.
 * Make sure you have [virtualbox](https://www.virtualbox.org/) installed.
 * clone this repository
