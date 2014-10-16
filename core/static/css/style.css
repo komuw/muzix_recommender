@@ -1,0 +1,29 @@
+/* 60px to make the container go all the way to the bottom of the topbar */
+body {
+  padding-top: 60px; 
+}
+
+img.logo {
+  height: 40px;
+  width: 50px;
+  margin-left: 380px;
+  margin-top: -70px;
+}
+
+.reddish {
+  background-color: #FF0000;
+  height: 15px;
+}
+
+label {
+    margin-right: 10px;
+}
+
+#id_search_lyrics {
+  height: 30px;
+  width: 400px;
+}
+
+input.btn.btn-large.btn-primary {
+  margin-top: 15px;
+}

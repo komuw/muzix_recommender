@@ -28,4 +28,4 @@ celerybeat-schedule
 *.pid
 
 #static
-static/
+/static
