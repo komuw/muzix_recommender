@@ -43,8 +43,8 @@ startsecs=5
 [program:yalicaregunicorn]
 user=root
 directory=/home/root/yalicare
-environment=DJANGO_SETTINGS_MODULE="config.settings.staging"
-command=authbind /home/root/.virtualenvs/yalicare/bin/gunicorn config.wsgi:application
+environment=DJANGO_SETTINGS_MODULE="settings.staging"
+command=authbind /home/root/.virtualenvs/yalicare/bin/gunicorn wsgi:application
     --workers=2
     --bind="0.0.0.0:7000"
      --access-logfile /home/root/yalicare/log/%(program_name)s_access.log
