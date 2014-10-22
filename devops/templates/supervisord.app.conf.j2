@@ -13,7 +13,11 @@ port=127.0.0.1:9012        ; (ip_address:port specifier, *:port for all iface)
 serverurl=http://127.0.0.1:9012 ; use an http:// url to specify an inet socket
 
 [group:{{ APP_NAME }}]
+{% if APP_ENVIRONMENT != "development" %}
 programs=gunicorn, celery, yalicaregunicorn
+{% else %}
+programs=gunicorn, celery
+{% endif %}
 
 [program:gunicorn]
 user={{ APP_USER }}
@@ -40,6 +44,8 @@ autorestart=true
 stopasgroup=true
 startsecs=5
 
+;for yalicare because they are hosted in same server.
+{% if APP_ENVIRONMENT != "development" %}
 [program:yalicaregunicorn]
 user=root
 directory=/home/root/yalicare
@@ -53,3 +59,4 @@ stderr_logfile=/home/root/yalicare/log/%(program_name)s.log
 autorestart=true
 stopasgroup=true
 startsecs=5
+{% endif %}
